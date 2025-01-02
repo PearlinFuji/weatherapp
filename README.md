@@ -51,6 +51,15 @@ cd WeatherApp
    weather.api.key=your_openweather_api_key
    weather.api.url=https://api.openweathermap.org/data/2.5/weather
    ```
+3. Create a Table within the database:
+   ```sql
+   CREATE TABLE report (id int(11) NOT NULL,
+   user varchar(50) NOT NULL,
+   postalcode varchar(50) NOT NULL,
+   weatherinfo text NOT NULL,
+   timestamp timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+   ALTER TABLE report ADD PRIMARY KEY (id);
+   ```
 
 ### Build and Run the Application
 
